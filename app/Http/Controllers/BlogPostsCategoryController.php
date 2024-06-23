@@ -99,9 +99,13 @@ class BlogPostsCategoryController extends Controller
     }
 
 
-    public function destroy(BlogPostsCategory $blogPostsCategory)
-    {
-        $blogPostsCategory->delete();
-        return redirect()->route('backend.blogpostscategories.index')->with('success', 'Blog Post Category deleted successfully.');
-    }
+    public function destroy($id)
+{
+    $blogPostsCategory = BlogPostsCategory::findOrFail($id);
+
+    $blogPostsCategory->delete();
+    return redirect()->route('backend.blogpostscategories.index')
+                     ->with('success', 'Blog Post Category deleted successfully.');
+}
+    
 }

@@ -25,10 +25,6 @@
             <tbody>
                 @foreach ($products as $product)
                     <tr>
-
-
-
-
                         <td>{{ $product->product_name }}</td>
                         <td>{{ $product->description }}</td>
                         <td>{{ $product->price }}</td>

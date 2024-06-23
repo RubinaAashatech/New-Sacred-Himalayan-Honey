@@ -13,14 +13,8 @@
             {{ Session::get('error') }}
         </div>
     @endif
-
-    <div class="row mb-2">
-        <div class="col-sm-6">
-            <h1 class="m-0">{{ $page_title }}</h1>
-            <a href="{{ route('backend.aboutus.create') }}" class="btn btn-primary mb-3">Add About</a>
-        </div>
-    </div>
    
+    <h1>About Us</h1>
     <table class="table table-bordered table-hover">
         <thead>
             <tr>

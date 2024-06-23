@@ -14,15 +14,7 @@
         </div>
     @endif
 
-
-    <div class="row mb-2">
-        <div class="col-sm-6">
-            <h1 class="m-0">{{ $page_title }}</h1>
-            <a href="{{ route('backend.sitesettings.create') }}" class="btn btn-primary mb-3">Add SiteSetting</a>
-        </div>
-    </div>
-
-
+    <h1>Sitesetting</h1>
     <table class="table table-bordered table-hover">
         <thead>
             <tr>

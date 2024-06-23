@@ -150,7 +150,8 @@ Route::get('/blogpostscategories/create', [BlogPostsCategoryController::class, '
 Route::post('/blogpostscategories', [BlogPostsCategoryController::class, 'store'])->name('blogpostscategories.store');
 Route::get('/blogpostscategories/{blogpostscategory}/edit', [BlogPostsCategoryController::class, 'edit'])->name('blogpostscategories.edit');
 Route::put('/blogpostscategories/{blogpostscategory}', [BlogPostsCategoryController::class, 'update'])->name('blogpostscategories.update');
-Route::delete('/blogpostscategories/{blogpostscategory}', [BlogPostsCategoryController::class, 'destroy'])->name('blogpostscategories.destroy');
+Route::delete('/blogpostscategories/{id}', [BlogPostsCategoryController::class, 'destroy'])->name('blogpostscategories.destroy');
+
 
 Route::get('/aboutus', [AboutController::class, 'index'])->name('aboutus.index');
 Route::get('/aboutus/create', [AboutController::class, 'create'])->name('aboutus.create');

@@ -25,6 +25,12 @@
             <ul class="navbar-nav flex-column mb-3" id="navbarVerticalNav">
                 <!-- Dashboard Link -->
                 <li class="nav-item">
+                    <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                        <div class="col-auto navbar-vertical-label">Dashboard</div>
+                        <div class="col ps-0">
+                            <hr class="mb-0 navbar-vertical-divider">
+                        </div>
+                    </div>
                     <a class="nav-link dropdown-indicator" href="#dashboard" role="button" data-bs-toggle="collapse"
                         aria-expanded="true" aria-controls="dashboard">
                         <div class="d-flex align-items-center">
@@ -42,8 +48,115 @@
                     </a>
                 </li>
 
+                <!-- Sitesetting Link -->
+                <li class="nav-item">
+                        <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                            <div class="col-auto navbar-vertical-label">Site Settings</div>
+                            <div class="col ps-0">
+                                <hr class="mb-0 navbar-vertical-divider">
+                            </div>
+                        </div>
+
+                    <a class="nav-link dropdown-indicator" href="#sitesettings" role="button" data-bs-toggle="collapse"
+                        aria-expanded="false" aria-controls="sitesettings">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon">
+                                <!-- Icon for sitesettings -->
+                                <svg class="svg-inline--fa fa-cog fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path fill="currentColor" d="M472 278.9l-42.7-7.1c-4.4-13.1-10.2-25.3-17.2-36.7l20.5-37.3c8.3-15.2 3.6-34.4-11.6-44.1l-37.9-26.7c-11.5-8.1-27.4-5.7-36.1 5.2l-27.5 35.2c-10.9-3.8-22.2-6.7-33.7-8.7l-7.1-42.7C303.6 34.6 290.4 32 277.3 32h-41.1c-13.1 0-26.3 2.6-38.5 7.6l-7.1 42.7c-11.5 2-22.8 5-33.7 8.7l-27.5-35.2c-8.7-11.1-24.6-13.3-36.1-5.2l-37.9 26.7c-15.2 9.7-19.9 28.9-11.6 44.1l20.5 37.3c-7 11.4-12.9 23.6-17.2 36.7l-42.7 7.1C34.6 289.4 32 302.6 32 315.7v41.1c0 13.1 2.6 26.3 7.6 38.5l42.7 7.1c4.4 13.1 10.2 25.3 17.2 36.7l-20.5 37.3c-8.3 15.2-3.6 34.4 11.6 44.1l37.9 26.7c11.5 8.1 27.4 5.7 36.1-5.2l27.5-35.2c10.9 3.8 22.2 6.7 33.7 8.7l7.1 42.7c12.2 5 25.4 7.6 38.5 7.6h41.1c13.1 0 26.3-2.6 38.5-7.6l7.1-42.7c11.5-2 22.8-5 33.7-8.7l27.5 35.2c8.7 11.1 24.6 13.3 36.1 5.2l37.9-26.7c15.2-9.7 19.9-28.9 11.6-44.1l-20.5-37.3c7-11.4 12.9-23.6 17.2-36.7l42.7-7.1c5-12.2 7.6-25.4 7.6-38.5v-41.1c0-13.1-2.6-26.3-7.6-38.5zM256 352c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"></path>
+                                </svg>
+                                
+                            </span>
+                            <span class="nav-link-text ps-1">Site Settings</span>
+                        </div>
+                    </a>
+                    <ul class="nav collapse" id="sitesettings">
+                        <li class="nav-item">
+                            <!-- Link to view all sitesettings -->
+                            <a class="nav-link" href="{{ route('backend.sitesettings.index') }}">Site Settings</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Link to create a new sitesettings -->
+                            <a class="nav-link" href="{{ route('backend.sitesettings.create') }}">Add New</a>
+                        </li>
+                    </ul>
+                </li>
+
+                 <!-- About Us Link -->
+                 <li class="nav-item">
+                    <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                        <div class="col-auto navbar-vertical-label">About Us</div>
+                        <div class="col ps-0">
+                            <hr class="mb-0 navbar-vertical-divider">
+                        </div>
+                    </div>
+                    <a class="nav-link dropdown-indicator" href="#aboutus" role="button" data-bs-toggle="collapse"
+                        aria-expanded="false" aria-controls="aboutus">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon">
+                                <!-- Icon for aboutus -->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-user fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img">
+                                    <path fill="currentColor" d="M256 288c47.5 0 86.4-38.7 86.4-86.4S303.5 115.2 256 115.2 169.6 153.9 169.6 201.6 208.5 288 256 288zm0 32c-70.7 0-214.4 35.9-214.4 107.2V464c0 17.7 14.3 32 32 32h340.8c17.7 0 32-14.3 32-32v-36.8c0-71.3-143.7-107.2-214.4-107.2z"></path>
+                                </svg>                                
+
+                            </span>
+                            <span class="nav-link-text ps-1">About Us</span>
+                        </div>
+                    </a>
+                    <ul class="nav collapse" id="aboutus">
+                        <li class="nav-item">
+                            <!-- Link to view all aboutus -->
+                            <a class="nav-link" href="{{ route('backend.aboutus.index') }}">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Link to create a new aboutus -->
+                            <a class="nav-link" href="{{ route('backend.aboutus.create') }}">Add New</a>
+                        </li>
+                    </ul>
+                </li>
+
+                 <!-- Blogpost Link -->
+                 <li class="nav-item">
+                    <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                        <div class="col-auto navbar-vertical-label">Blog post category</div>
+                        <div class="col ps-0">
+                            <hr class="mb-0 navbar-vertical-divider">
+                        </div>
+                    </div>
+                    <a class="nav-link dropdown-indicator" href="#blogpostscategories" role="button" data-bs-toggle="collapse"
+                        aria-expanded="false" aria-controls="blogpostscategories">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon">
+                                <!-- Icon for blogpostscategories -->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-newspaper fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="newspaper" role="img">
+                                    <path fill="currentColor" d="M464 32H48C21.49 32 0 53.49 0 80v320c0 26.51 21.49 48 48 48h48v48c0 13.25 10.75 24 24 24h288c13.25 0 24-10.75 24-24v-48h48c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zm-48 368H96v-96h320zm0-144H96V80h320z"></path>
+                                </svg>
+                                
+                            </span>
+                            <span class="nav-link-text ps-1">Blog post category</span>
+                        </div>
+                    </a>
+                    <ul class="nav collapse" id="blogpostscategories">
+                        <li class="nav-item">
+                            <!-- Link to view all blogpostscategories -->
+                            <a class="nav-link" href="{{ route('backend.blogpostscategories.index') }}">View All</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Link to create a new blogpostscategories -->
+                            <a class="nav-link" href="{{ route('backend.blogpostscategories.create') }}">Add New</a>
+                        </li>
+                    </ul>
+                </li>
+
+
                 <!-- Product Management Dropdown -->
                 <li class="nav-item">
+                    <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                        <div class="col-auto navbar-vertical-label">Product Management</div>
+                        <div class="col ps-0">
+                            <hr class="mb-0 navbar-vertical-divider">
+                        </div>
+                    </div>
                     <a class="nav-link dropdown-indicator" href="#product-management" role="button"
                         data-bs-toggle="collapse" aria-expanded="false" aria-controls="product-management">
                         <div class="d-flex align-items-center">
@@ -88,6 +201,12 @@
                 
                     <!-- Order Management Dropdown -->
                     <li class="nav-item">
+                        <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                            <div class="col-auto navbar-vertical-label">Order Management</div>
+                            <div class="col ps-0">
+                                <hr class="mb-0 navbar-vertical-divider">
+                            </div>
+                        </div>
                         <a class="nav-link dropdown-indicator" href="#order-management" role="button"
                             data-bs-toggle="collapse" aria-expanded="false" aria-controls="order-management">
                             <div class="d-flex align-items-center">
@@ -115,6 +234,12 @@
 
                 <!-- Customers Link -->
                 <li class="nav-item">
+                    <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                        <div class="col-auto navbar-vertical-label">Customers</div>
+                        <div class="col ps-0">
+                            <hr class="mb-0 navbar-vertical-divider">
+                        </div>
+                    </div>
                     <a class="nav-link dropdown-indicator" href="#customers" role="button" data-bs-toggle="collapse"
                         aria-expanded="false" aria-controls="customers">
                         <div class="d-flex align-items-center">
@@ -143,6 +268,12 @@
 
                 <!-- Shopping Cart Dropdown -->
                 <li class="nav-item">
+                    <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                        <div class="col-auto navbar-vertical-label">Shopping Cart</div>
+                        <div class="col ps-0">
+                            <hr class="mb-0 navbar-vertical-divider">
+                        </div>
+                    </div>
                     <a class="nav-link dropdown-indicator" href="#shopping-cart" role="button"
                         data-bs-toggle="collapse" aria-expanded="false" aria-controls="shopping-cart">
                         <div class="d-flex align-items-center">
@@ -170,6 +301,12 @@
 
                 <!-- Coupons Link -->
                 <li class="nav-item">
+                    <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                        <div class="col-auto navbar-vertical-label">Coupons</div>
+                        <div class="col ps-0">
+                            <hr class="mb-0 navbar-vertical-divider">
+                        </div>
+                    </div>
                     <a class="nav-link dropdown-indicator" href="#coupons" role="button" data-bs-toggle="collapse"
                         aria-expanded="false" aria-controls="coupons">
                         <div class="d-flex align-items-center">
@@ -201,6 +338,12 @@
 
                 <!-- Inventories Link -->
                 <li class="nav-item">
+                    <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                        <div class="col-auto navbar-vertical-label">Inventories</div>
+                        <div class="col ps-0">
+                            <hr class="mb-0 navbar-vertical-divider">
+                        </div>
+                    </div>
                     <a class="nav-link dropdown-indicator" href="#inventories" role="button"
                         data-bs-toggle="collapse" aria-expanded="false" aria-controls="inventories">
                         <div class="d-flex align-items-center">
@@ -235,6 +378,12 @@
 
                 <!-- Shipments Link -->
                 <li class="nav-item">
+                    <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                        <div class="col-auto navbar-vertical-label">Shipments</div>
+                        <div class="col ps-0">
+                            <hr class="mb-0 navbar-vertical-divider">
+                        </div>
+                    </div>
                     <a class="nav-link dropdown-indicator" href="#shipments" role="button"
                         data-bs-toggle="collapse" aria-expanded="false" aria-controls="shipments">
                         <div class="d-flex align-items-center">
@@ -267,6 +416,12 @@
 
                 <!-- Transactions Link -->
                 <li class="nav-item">
+                    <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                        <div class="col-auto navbar-vertical-label">Transactions</div>
+                        <div class="col ps-0">
+                            <hr class="mb-0 navbar-vertical-divider">
+                        </div>
+                    </div>
                     <a class="nav-link dropdown-indicator" href="#transactions" role="button"
                         data-bs-toggle="collapse" aria-expanded="false" aria-controls="transactions">
                         <div class="d-flex align-items-center">
@@ -298,6 +453,12 @@
 
                 <!-- Wishlists Link -->
                 <li class="nav-item">
+                    <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                        <div class="col-auto navbar-vertical-label">Wishlists</div>
+                        <div class="col ps-0">
+                            <hr class="mb-0 navbar-vertical-divider">
+                        </div>
+                    </div>
                     <a class="nav-link dropdown-indicator" href="#wishlists" role="button"
                         data-bs-toggle="collapse" aria-expanded="false" aria-controls="wishlists">
                         <div class="d-flex align-items-center">
@@ -330,6 +491,12 @@
 
                 <!-- Payments Link -->
                 <li class="nav-item">
+                    <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                        <div class="col-auto navbar-vertical-label">Payment Integration</div>
+                        <div class="col ps-0">
+                            <hr class="mb-0 navbar-vertical-divider">
+                        </div>
+                    </div>
                     <a class="nav-link dropdown-indicator" href="#payments" role="button" data-bs-toggle="collapse"
                         aria-expanded="false" aria-controls="payments">
                         <div class="d-flex align-items-center">
@@ -358,98 +525,7 @@
                     </ul>
                 </li>
 
-                <!-- Sitesetting Link -->
-                <li class="nav-item">
-                    <a class="nav-link dropdown-indicator" href="#sitesettings" role="button" data-bs-toggle="collapse"
-                        aria-expanded="false" aria-controls="sitesettings">
-                        <div class="d-flex align-items-center">
-                            <span class="nav-link-icon">
-                                <!-- Icon for sitesettings -->
-                                <svg class="svg-inline--fa fa-credit-card fa-w-20" aria-hidden="true"
-                                    focusable="false" data-prefix="fas" data-icon="credit-card" role="img"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M0 80C0 53.49 21.49 32 48 32H528c26.51 0 48 21.49 48 48V144H0V80zM576 192v192c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V192H576zM128 320c-17.67 0-32 14.33-32 32s14.33 32 32 32h320c17.67 0 32-14.33 32-32s-14.33-32-32-32H128z">
-                                    </path>
-                                </svg>
-                            </span>
-                            <span class="nav-link-text ps-1">Site Settings</span>
-                        </div>
-                    </a>
-                    <ul class="nav collapse" id="sitesettings">
-                        <li class="nav-item">
-                            <!-- Link to view all sitesettings -->
-                            <a class="nav-link" href="{{ route('backend.sitesettings.index') }}">View All</a>
-                        </li>
-                        <li class="nav-item">
-                            <!-- Link to create a new sitesettings -->
-                            <a class="nav-link" href="{{ route('backend.sitesettings.create') }}">Add New</a>
-                        </li>
-                    </ul>
-                </li>
-
-
-                 <!-- Blogpost Link -->
-                 <li class="nav-item">
-                    <a class="nav-link dropdown-indicator" href="#blogpostscategories" role="button" data-bs-toggle="collapse"
-                        aria-expanded="false" aria-controls="blogpostscategories">
-                        <div class="d-flex align-items-center">
-                            <span class="nav-link-icon">
-                                <!-- Icon for blogpostscategories -->
-                                <svg class="svg-inline--fa fa-credit-card fa-w-20" aria-hidden="true"
-                                    focusable="false" data-prefix="fas" data-icon="credit-card" role="img"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M0 80C0 53.49 21.49 32 48 32H528c26.51 0 48 21.49 48 48V144H0V80zM576 192v192c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V192H576zM128 320c-17.67 0-32 14.33-32 32s14.33 32 32 32h320c17.67 0 32-14.33 32-32s-14.33-32-32-32H128z">
-                                    </path>
-                                </svg>
-                            </span>
-                            <span class="nav-link-text ps-1">Blog post category</span>
-                        </div>
-                    </a>
-                    <ul class="nav collapse" id="blogpostscategories">
-                        <li class="nav-item">
-                            <!-- Link to view all blogpostscategories -->
-                            <a class="nav-link" href="{{ route('backend.blogpostscategories.index') }}">View All</a>
-                        </li>
-                        <li class="nav-item">
-                            <!-- Link to create a new blogpostscategories -->
-                            <a class="nav-link" href="{{ route('backend.blogpostscategories.create') }}">Add New</a>
-                        </li>
-                    </ul>
-                </li>
-
-                 <!-- About Us Link -->
-                 <li class="nav-item">
-                    <a class="nav-link dropdown-indicator" href="#aboutus" role="button" data-bs-toggle="collapse"
-                        aria-expanded="false" aria-controls="aboutus">
-                        <div class="d-flex align-items-center">
-                            <span class="nav-link-icon">
-                                <!-- Icon for aboutus -->
-                                <svg class="svg-inline--fa fa-credit-card fa-w-20" aria-hidden="true"
-                                    focusable="false" data-prefix="fas" data-icon="credit-card" role="img"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M0 80C0 53.49 21.49 32 48 32H528c26.51 0 48 21.49 48 48V144H0V80zM576 192v192c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V192H576zM128 320c-17.67 0-32 14.33-32 32s14.33 32 32 32h320c17.67 0 32-14.33 32-32s-14.33-32-32-32H128z">
-                                    </path>
-                                </svg>
-                            </span>
-                            <span class="nav-link-text ps-1">About</span>
-                        </div>
-                    </a>
-                    <ul class="nav collapse" id="aboutus">
-                        <li class="nav-item">
-                            <!-- Link to view all aboutus -->
-                            <a class="nav-link" href="{{ route('backend.aboutus.index') }}">View All</a>
-                        </li>
-                        <li class="nav-item">
-                            <!-- Link to create a new aboutus -->
-                            <a class="nav-link" href="{{ route('backend.aboutus.create') }}">Add New</a>
-                        </li>
-                    </ul>
-                </li>
-              
-
+                
             </ul>
         </div>
     </div>

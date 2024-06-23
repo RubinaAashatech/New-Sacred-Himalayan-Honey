@@ -44,32 +44,12 @@
                         <a href="{{ route('backend.blogpostscategories.edit', $category->id) }}" class="btn btn-primary">Edit</a>
 
                         <!-- Delete Button -->
-                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal{{ $category->id }}">Delete</button>
-
-                        <!-- Delete Modal -->
-                        <div class="modal fade" id="deleteModal{{ $category->id }}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel{{ $category->id }}" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="deleteModalLabel{{ $category->id }}">Delete Blog Post Category</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        Are you sure you want to delete this category?
-                                    </div>
-                                    <div class="modal-footer">
-                                        <form action="{{ route('backend.blogpostscategories.destroy', $category->id) }}" method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="btn btn-danger">Delete</button>
-                                        </form>
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <form action="{{ route('backend.blogpostscategories.destroy', $category->id) }}" method="POST" style="display:inline-block;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this blog?')">Delete</button>
+                        </form>
+                        
                     </td>
                 </tr>
             @endforeach

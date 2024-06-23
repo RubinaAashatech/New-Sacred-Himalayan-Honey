@@ -62,12 +62,19 @@ class CustomerController extends Controller
             'date_of_birth' => 'nullable|date',
             'gender' => 'nullable|string|in:male,female,other',
         ]);
-
-        Customer::create($request->all());
-
-        return redirect()->route('backend.customers.index')
-                         ->with('success', 'Customer created successfully.');
+    
+        try {
+            Customer::create($request->all());
+    
+            return redirect()->route('backend.customers.index')
+                             ->with('success', 'Customer created successfully.');
+        } catch (\Exception $e) {
+            return redirect()->back()
+                             ->withErrors(['error' => 'An error occurred while creating the customer. Please try again.'])
+                             ->withInput();
+        }
     }
+    
 
     /**
      * Show the form for editing the specified resource.
