@@ -13,6 +13,9 @@ use App\Http\Controllers\ShipmentController;
 use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\SiteSettingController;
+use App\Http\Controllers\BlogPostsCategoryController;
+use App\Http\Controllers\AboutController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -135,7 +138,29 @@ Route::get('/transactions/{transaction}/edit', [TransactionController::class, 'e
 Route::put('/transactions/{transaction}', [TransactionController::class, 'update'])->name('transactions.update');
 Route::delete('/transactions/{transaction}', [TransactionController::class, 'destroy'])->name('transactions.destroy');
 
+Route::get('/sitesettings', [SiteSettingController::class, 'index'])->name('sitesettings.index');
+Route::get('/sitesettings/create', [SiteSettingController::class, 'create'])->name('sitesettings.create');
+Route::post('/sitesettings', [SiteSettingController::class, 'store'])->name('sitesettings.store');
+Route::get('/sitesettings/{sitesetting}/edit', [SiteSettingController::class, 'edit'])->name('sitesettings.edit');
+Route::put('/sitesettings/{sitesetting}', [SiteSettingController::class, 'update'])->name('sitesettings.update');
+Route::delete('/sitesettings/{sitesetting}', [SiteSettingController::class, 'destroy'])->name('sitesettings.destroy');
+
+Route::get('/blogpostscategories', [BlogPostsCategoryController::class, 'index'])->name('blogpostscategories.index');
+Route::get('/blogpostscategories/create', [BlogPostsCategoryController::class, 'create'])->name('blogpostscategories.create');
+Route::post('/blogpostscategories', [BlogPostsCategoryController::class, 'store'])->name('blogpostscategories.store');
+Route::get('/blogpostscategories/{blogpostscategory}/edit', [BlogPostsCategoryController::class, 'edit'])->name('blogpostscategories.edit');
+Route::put('/blogpostscategories/{blogpostscategory}', [BlogPostsCategoryController::class, 'update'])->name('blogpostscategories.update');
+Route::delete('/blogpostscategories/{blogpostscategory}', [BlogPostsCategoryController::class, 'destroy'])->name('blogpostscategories.destroy');
+
+Route::get('/aboutus', [AboutController::class, 'index'])->name('aboutus.index');
+Route::get('/aboutus/create', [AboutController::class, 'create'])->name('aboutus.create');
+Route::post('/aboutus', [AboutController::class, 'store'])->name('aboutus.store');
+Route::get('/aboutus/{about}/edit', [AboutController::class, 'edit'])->name('aboutus.edit');
+Route::put('/aboutus/{about}', [AboutController::class, 'update'])->name('aboutus.update');
+Route::delete('/aboutus/{about}', [AboutController::class, 'destroy'])->name('aboutus.destroy');
+
 });
+
 
 
 // Route::post('/backend/customers', [CustomerController::class, 'store'])->name('backend.customers.store');

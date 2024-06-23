@@ -19,6 +19,8 @@ class DatabaseSeeder extends Seeder
         // Then, run the SuperAdminSeeder to create the SuperAdmin user and assign the admin role
         $this->call(SuperAdminSeeder::class);
 
+        $this->call(UserSeeder::class);
+
         // Finally, create the Test User (if needed)
         // User::factory(10)->create();
 

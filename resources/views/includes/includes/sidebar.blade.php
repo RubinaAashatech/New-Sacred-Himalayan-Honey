@@ -358,14 +358,97 @@
                     </ul>
                 </li>
 
+                <!-- Sitesetting Link -->
+                <li class="nav-item">
+                    <a class="nav-link dropdown-indicator" href="#sitesettings" role="button" data-bs-toggle="collapse"
+                        aria-expanded="false" aria-controls="sitesettings">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon">
+                                <!-- Icon for sitesettings -->
+                                <svg class="svg-inline--fa fa-credit-card fa-w-20" aria-hidden="true"
+                                    focusable="false" data-prefix="fas" data-icon="credit-card" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
+                                    <path fill="currentColor"
+                                        d="M0 80C0 53.49 21.49 32 48 32H528c26.51 0 48 21.49 48 48V144H0V80zM576 192v192c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V192H576zM128 320c-17.67 0-32 14.33-32 32s14.33 32 32 32h320c17.67 0 32-14.33 32-32s-14.33-32-32-32H128z">
+                                    </path>
+                                </svg>
+                            </span>
+                            <span class="nav-link-text ps-1">Site Settings</span>
+                        </div>
+                    </a>
+                    <ul class="nav collapse" id="sitesettings">
+                        <li class="nav-item">
+                            <!-- Link to view all sitesettings -->
+                            <a class="nav-link" href="{{ route('backend.sitesettings.index') }}">View All</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Link to create a new sitesettings -->
+                            <a class="nav-link" href="{{ route('backend.sitesettings.create') }}">Add New</a>
+                        </li>
+                    </ul>
+                </li>
 
 
+                 <!-- Blogpost Link -->
+                 <li class="nav-item">
+                    <a class="nav-link dropdown-indicator" href="#blogpostscategories" role="button" data-bs-toggle="collapse"
+                        aria-expanded="false" aria-controls="blogpostscategories">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon">
+                                <!-- Icon for blogpostscategories -->
+                                <svg class="svg-inline--fa fa-credit-card fa-w-20" aria-hidden="true"
+                                    focusable="false" data-prefix="fas" data-icon="credit-card" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
+                                    <path fill="currentColor"
+                                        d="M0 80C0 53.49 21.49 32 48 32H528c26.51 0 48 21.49 48 48V144H0V80zM576 192v192c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V192H576zM128 320c-17.67 0-32 14.33-32 32s14.33 32 32 32h320c17.67 0 32-14.33 32-32s-14.33-32-32-32H128z">
+                                    </path>
+                                </svg>
+                            </span>
+                            <span class="nav-link-text ps-1">Blog post category</span>
+                        </div>
+                    </a>
+                    <ul class="nav collapse" id="blogpostscategories">
+                        <li class="nav-item">
+                            <!-- Link to view all blogpostscategories -->
+                            <a class="nav-link" href="{{ route('backend.blogpostscategories.index') }}">View All</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Link to create a new blogpostscategories -->
+                            <a class="nav-link" href="{{ route('backend.blogpostscategories.create') }}">Add New</a>
+                        </li>
+                    </ul>
+                </li>
 
-
-
-
-
-
+                 <!-- About Us Link -->
+                 <li class="nav-item">
+                    <a class="nav-link dropdown-indicator" href="#aboutus" role="button" data-bs-toggle="collapse"
+                        aria-expanded="false" aria-controls="aboutus">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon">
+                                <!-- Icon for aboutus -->
+                                <svg class="svg-inline--fa fa-credit-card fa-w-20" aria-hidden="true"
+                                    focusable="false" data-prefix="fas" data-icon="credit-card" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
+                                    <path fill="currentColor"
+                                        d="M0 80C0 53.49 21.49 32 48 32H528c26.51 0 48 21.49 48 48V144H0V80zM576 192v192c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V192H576zM128 320c-17.67 0-32 14.33-32 32s14.33 32 32 32h320c17.67 0 32-14.33 32-32s-14.33-32-32-32H128z">
+                                    </path>
+                                </svg>
+                            </span>
+                            <span class="nav-link-text ps-1">About</span>
+                        </div>
+                    </a>
+                    <ul class="nav collapse" id="aboutus">
+                        <li class="nav-item">
+                            <!-- Link to view all aboutus -->
+                            <a class="nav-link" href="{{ route('backend.aboutus.index') }}">View All</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Link to create a new aboutus -->
+                            <a class="nav-link" href="{{ route('backend.aboutus.create') }}">Add New</a>
+                        </li>
+                    </ul>
+                </li>
+              
 
             </ul>
         </div>
