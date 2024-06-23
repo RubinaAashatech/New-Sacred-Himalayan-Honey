@@ -86,79 +86,79 @@ Route::middleware(['auth:superadmin'])->prefix('backend')->name('backend.')->gro
     Route::get('/categories/{category}/brands', [ProductController::class, 'getBrands'])->name('products.getBrands');
 
 
-Route::get('/payments', [PaymentController::class, 'index'])->name('payments.index');
-Route::get('/payments/create', [PaymentController::class, 'create'])->name('payments.create');
-Route::post('/payments', [PaymentController::class, 'store'])->name('payments.store');
-Route::get('/payments/{payment}/edit', [PaymentController::class, 'edit'])->name('payments.edit');
-Route::put('/payments/{payment}', [PaymentController::class, 'update'])->name('payments.update');
-Route::delete('/payments/{payment}', [PaymentController::class, 'destroy'])->name('payments.destroy');
+    Route::get('/payments', [PaymentController::class, 'index'])->name('payments.index');
+    Route::get('/payments/create', [PaymentController::class, 'create'])->name('payments.create');
+    Route::post('/payments', [PaymentController::class, 'store'])->name('payments.store');
+    Route::get('/payments/{payment}/edit', [PaymentController::class, 'edit'])->name('payments.edit');
+    Route::put('/payments/{payment}', [PaymentController::class, 'update'])->name('payments.update');
+    Route::delete('/payments/{payment}', [PaymentController::class, 'destroy'])->name('payments.destroy');
 
 
-Route::get('/coupons', [CouponController::class, 'index'])->name('coupons.index');
-Route::get('/coupons/create', [CouponController::class, 'create'])->name('coupons.create');
-Route::post('/coupons', [CouponController::class, 'store'])->name('coupons.store');
-Route::get('/coupons/{coupon}/edit', [CouponController::class, 'edit'])->name('coupons.edit');
-Route::put('/coupons/{coupon}', [CouponController::class, 'update'])->name('coupons.update');
-Route::delete('/coupons/{coupon}', [CouponController::class, 'destroy'])->name('coupons.destroy');
+    Route::get('/coupons', [CouponController::class, 'index'])->name('coupons.index');
+    Route::get('/coupons/create', [CouponController::class, 'create'])->name('coupons.create');
+    Route::post('/coupons', [CouponController::class, 'store'])->name('coupons.store');
+    Route::get('/coupons/{coupon}/edit', [CouponController::class, 'edit'])->name('coupons.edit');
+    Route::put('/coupons/{coupon}', [CouponController::class, 'update'])->name('coupons.update');
+    Route::delete('/coupons/{coupon}', [CouponController::class, 'destroy'])->name('coupons.destroy');
 
 
-Route::get('/inventories', [InventoryController::class, 'index'])->name('inventories.index');
-Route::get('/inventories/create', [InventoryController::class, 'create'])->name('inventories.create');
-Route::post('/inventories', [InventoryController::class, 'store'])->name('inventories.store');
-Route::get('/inventories/{inventory}/edit', [InventoryController::class, 'edit'])->name('inventories.edit');
-Route::put('/inventories/{inventory}', [InventoryController::class, 'update'])->name('inventories.update');
-Route::delete('/inventories/{inventory}', [InventoryController::class, 'destroy'])->name('inventories.destroy');
+    Route::get('/inventories', [InventoryController::class, 'index'])->name('inventories.index');
+    Route::get('/inventories/create', [InventoryController::class, 'create'])->name('inventories.create');
+    Route::post('/inventories', [InventoryController::class, 'store'])->name('inventories.store');
+    Route::get('/inventories/{inventory}/edit', [InventoryController::class, 'edit'])->name('inventories.edit');
+    Route::put('/inventories/{inventory}', [InventoryController::class, 'update'])->name('inventories.update');
+    Route::delete('/inventories/{inventory}', [InventoryController::class, 'destroy'])->name('inventories.destroy');
 
-Route::get('/shipments', [ShipmentController::class, 'index'])->name('shipments.index');
-Route::get('/shipments/create', [ShipmentController::class, 'create'])->name('shipments.create');
-Route::post('/shipments', [ShipmentController::class, 'store'])->name('shipments.store');
-Route::get('/shipments/{shipment}/edit', [ShipmentController::class, 'edit'])->name('shipments.edit');
-Route::put('/shipments/{shipment}', [ShipmentController::class, 'update'])->name('shipments.update');
-Route::delete('/shipments/{shipment}', [ShipmentController::class, 'destroy'])->name('shipments.destroy');
+    Route::get('/shipments', [ShipmentController::class, 'index'])->name('shipments.index');
+    Route::get('/shipments/create', [ShipmentController::class, 'create'])->name('shipments.create');
+    Route::post('/shipments', [ShipmentController::class, 'store'])->name('shipments.store');
+    Route::get('/shipments/{shipment}/edit', [ShipmentController::class, 'edit'])->name('shipments.edit');
+    Route::put('/shipments/{shipment}', [ShipmentController::class, 'update'])->name('shipments.update');
+    Route::delete('/shipments/{shipment}', [ShipmentController::class, 'destroy'])->name('shipments.destroy');
 
-Route::get('/carts', [CartController::class, 'index'])->name('carts.index');
-Route::get('/carts/create', [CartController::class, 'create'])->name('carts.create');
-Route::post('/carts', [CartController::class, 'store'])->name('carts.store');
-Route::get('/carts/{cart}/edit', [CartController::class, 'edit'])->name('carts.edit');
-Route::put('/carts/{cart}', [CartController::class, 'update'])->name('carts.update');
-Route::delete('/carts/{cart}', [CartController::class, 'destroy'])->name('carts.destroy');
-
-
-Route::get('/wishlists', [WishlistController::class, 'index'])->name('wishlists.index');
-Route::get('/wishlists/create', [WishlistController::class, 'create'])->name('wishlists.create');
-Route::post('/wishlists', [WishlistController::class, 'store'])->name('wishlists.store');
-Route::get('/wishlists/{wishlist}/edit', [WishlistController::class, 'edit'])->name('wishlists.edit');
-Route::put('/wishlists/{wishlist}', [WishlistController::class, 'update'])->name('wishlists.update');
-Route::delete('/wishlists/{wishlist}', [WishlistController::class, 'destroy'])->name('wishlists.destroy');
-
-Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions.index');
-Route::get('/transactions/create', [TransactionController::class, 'create'])->name('transactions.create');
-Route::post('/transactions', [TransactionController::class, 'store'])->name('transactions.store');
-Route::get('/transactions/{transaction}/edit', [TransactionController::class, 'edit'])->name('transactions.edit');
-Route::put('/transactions/{transaction}', [TransactionController::class, 'update'])->name('transactions.update');
-Route::delete('/transactions/{transaction}', [TransactionController::class, 'destroy'])->name('transactions.destroy');
-
-Route::get('/sitesettings', [SiteSettingController::class, 'index'])->name('sitesettings.index');
-Route::get('/sitesettings/create', [SiteSettingController::class, 'create'])->name('sitesettings.create');
-Route::post('/sitesettings', [SiteSettingController::class, 'store'])->name('sitesettings.store');
-Route::get('/sitesettings/{sitesetting}/edit', [SiteSettingController::class, 'edit'])->name('sitesettings.edit');
-Route::put('/sitesettings/{sitesetting}', [SiteSettingController::class, 'update'])->name('sitesettings.update');
-Route::delete('/sitesettings/{sitesetting}', [SiteSettingController::class, 'destroy'])->name('sitesettings.destroy');
-
-Route::get('/blogpostscategories', [BlogPostsCategoryController::class, 'index'])->name('blogpostscategories.index');
-Route::get('/blogpostscategories/create', [BlogPostsCategoryController::class, 'create'])->name('blogpostscategories.create');
-Route::post('/blogpostscategories', [BlogPostsCategoryController::class, 'store'])->name('blogpostscategories.store');
-Route::get('/blogpostscategories/{blogpostscategory}/edit', [BlogPostsCategoryController::class, 'edit'])->name('blogpostscategories.edit');
-Route::put('/blogpostscategories/{blogpostscategory}', [BlogPostsCategoryController::class, 'update'])->name('blogpostscategories.update');
-Route::delete('/blogpostscategories/{id}', [BlogPostsCategoryController::class, 'destroy'])->name('blogpostscategories.destroy');
+    Route::get('/carts', [CartController::class, 'index'])->name('carts.index');
+    Route::get('/carts/create', [CartController::class, 'create'])->name('carts.create');
+    Route::post('/carts', [CartController::class, 'store'])->name('carts.store');
+    Route::get('/carts/{cart}/edit', [CartController::class, 'edit'])->name('carts.edit');
+    Route::put('/carts/{cart}', [CartController::class, 'update'])->name('carts.update');
+    Route::delete('/carts/{cart}', [CartController::class, 'destroy'])->name('carts.destroy');
 
 
-Route::get('/aboutus', [AboutController::class, 'index'])->name('aboutus.index');
-Route::get('/aboutus/create', [AboutController::class, 'create'])->name('aboutus.create');
-Route::post('/aboutus', [AboutController::class, 'store'])->name('aboutus.store');
-Route::get('/aboutus/{about}/edit', [AboutController::class, 'edit'])->name('aboutus.edit');
-Route::put('/aboutus/{about}', [AboutController::class, 'update'])->name('aboutus.update');
-Route::delete('/aboutus/{about}', [AboutController::class, 'destroy'])->name('aboutus.destroy');
+    Route::get('/wishlists', [WishlistController::class, 'index'])->name('wishlists.index');
+    Route::get('/wishlists/create', [WishlistController::class, 'create'])->name('wishlists.create');
+    Route::post('/wishlists', [WishlistController::class, 'store'])->name('wishlists.store');
+    Route::get('/wishlists/{wishlist}/edit', [WishlistController::class, 'edit'])->name('wishlists.edit');
+    Route::put('/wishlists/{wishlist}', [WishlistController::class, 'update'])->name('wishlists.update');
+    Route::delete('/wishlists/{wishlist}', [WishlistController::class, 'destroy'])->name('wishlists.destroy');
+
+    Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions.index');
+    Route::get('/transactions/create', [TransactionController::class, 'create'])->name('transactions.create');
+    Route::post('/transactions', [TransactionController::class, 'store'])->name('transactions.store');
+    Route::get('/transactions/{transaction}/edit', [TransactionController::class, 'edit'])->name('transactions.edit');
+    Route::put('/transactions/{transaction}', [TransactionController::class, 'update'])->name('transactions.update');
+    Route::delete('/transactions/{transaction}', [TransactionController::class, 'destroy'])->name('transactions.destroy');
+
+    Route::get('/sitesettings', [SiteSettingController::class, 'index'])->name('sitesettings.index');
+    Route::get('/sitesettings/create', [SiteSettingController::class, 'create'])->name('sitesettings.create');
+    Route::post('/sitesettings', [SiteSettingController::class, 'store'])->name('sitesettings.store');
+    Route::get('/sitesettings/{sitesetting}/edit', [SiteSettingController::class, 'edit'])->name('sitesettings.edit');
+    Route::put('/sitesettings/{sitesetting}', [SiteSettingController::class, 'update'])->name('sitesettings.update');
+    Route::delete('/sitesettings/{sitesetting}', [SiteSettingController::class, 'destroy'])->name('sitesettings.destroy');
+
+    Route::get('/blogpostscategories', [BlogPostsCategoryController::class, 'index'])->name('blogpostscategories.index');
+    Route::get('/blogpostscategories/create', [BlogPostsCategoryController::class, 'create'])->name('blogpostscategories.create');
+    Route::post('/blogpostscategories', [BlogPostsCategoryController::class, 'store'])->name('blogpostscategories.store');
+    Route::get('/blogpostscategories/{blogpostscategory}/edit', [BlogPostsCategoryController::class, 'edit'])->name('blogpostscategories.edit');
+    Route::put('/blogpostscategories/{blogpostscategory}', [BlogPostsCategoryController::class, 'update'])->name('blogpostscategories.update');
+    Route::delete('/blogpostscategories/{id}', [BlogPostsCategoryController::class, 'destroy'])->name('blogpostscategories.destroy');
+
+
+    Route::get('/aboutus', [AboutController::class, 'index'])->name('aboutus.index');
+    Route::get('/aboutus/create', [AboutController::class, 'create'])->name('aboutus.create');
+    Route::post('/aboutus', [AboutController::class, 'store'])->name('aboutus.store');
+    Route::get('/aboutus/{about}/edit', [AboutController::class, 'edit'])->name('aboutus.edit');
+    Route::put('/aboutus/{about}', [AboutController::class, 'update'])->name('aboutus.update');
+    Route::delete('/aboutus/{about}', [AboutController::class, 'destroy'])->name('aboutus.destroy');
 
 });
 
