@@ -21,7 +21,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav m-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="{{ route('Index') }}">Home</a>
               </li>
 
               <li class="nav-item dropdown">
@@ -44,7 +44,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="./pages/product.html">Product</a>
+                <a class="nav-link" href="{{ route('Product') }}">Product</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./pages/blog.html">Blog</a>
@@ -70,7 +70,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="./pages/contact.html">Contact</a>
+                <a class="nav-link" href="{{ route('Contact') }}">Contact</a>
               </li>
             </ul>
             <form class="d-flex">

@@ -17,6 +17,7 @@ use App\Http\Controllers\SiteSettingController;
 use App\Http\Controllers\BlogPostsCategoryController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\FrontviewController;
+use App\Http\Controllers\SingleController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -162,7 +163,14 @@ Route::middleware(['auth:superadmin'])->prefix('backend')->name('backend.')->gro
 
 });
 
-Route::get('/', [FrontviewController::class, 'index'])->name('index');
+Route::get('/', [FrontviewController::class, 'index'])->name('Index');
+
+//Routes for SingleController
+Route::prefix('/')->group(function () {
+    Route::get('/product', [SingleController::class, 'render_products'])->name('Product');
+    Route::get('/contact', [SingleController::class, 'render_contact'])->name('Contact');
+
+});
 
 // Route::post('/backend/customers', [CustomerController::class, 'store'])->name('backend.customers.store');
 // Route::get('/backend/customers', [CustomerController::class, 'index'])->name('backend.customers.index');
