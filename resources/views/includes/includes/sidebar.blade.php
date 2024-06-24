@@ -75,10 +75,6 @@
                             <!-- Link to view all sitesettings -->
                             <a class="nav-link" href="{{ route('backend.sitesettings.index') }}">Site Settings</a>
                         </li>
-                        <li class="nav-item">
-                            <!-- Link to create a new sitesettings -->
-                            <a class="nav-link" href="{{ route('backend.sitesettings.create') }}">Add New</a>
-                        </li>
                     </ul>
                 </li>
 
@@ -107,10 +103,6 @@
                         <li class="nav-item">
                             <!-- Link to view all aboutus -->
                             <a class="nav-link" href="{{ route('backend.aboutus.index') }}">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <!-- Link to create a new aboutus -->
-                            <a class="nav-link" href="{{ route('backend.aboutus.create') }}">Add New</a>
                         </li>
                     </ul>
                 </li>

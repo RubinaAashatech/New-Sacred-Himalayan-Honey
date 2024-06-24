@@ -21,6 +21,10 @@ class DatabaseSeeder extends Seeder
 
         $this->call(UserSeeder::class);
 
+        $this->call(SitesettingSeeder::class);
+
+        $this->call(AboutSeeder::class);
+
         // Finally, create the Test User (if needed)
         // User::factory(10)->create();
 

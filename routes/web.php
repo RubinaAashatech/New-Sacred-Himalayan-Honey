@@ -16,11 +16,11 @@ use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\SiteSettingController;
 use App\Http\Controllers\BlogPostsCategoryController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\FrontviewController;
 
 Route::get('/', function () {
     return view('welcome');
 });
-
 
 
 Route::get('/layout', function () {
@@ -162,7 +162,7 @@ Route::middleware(['auth:superadmin'])->prefix('backend')->name('backend.')->gro
 
 });
 
-
+Route::get('/', [FrontviewController::class, 'index'])->name('index');
 
 // Route::post('/backend/customers', [CustomerController::class, 'store'])->name('backend.customers.store');
 // Route::get('/backend/customers', [CustomerController::class, 'index'])->name('backend.customers.index');

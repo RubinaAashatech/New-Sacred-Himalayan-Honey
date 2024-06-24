@@ -158,6 +158,8 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
+        Yajra\DataTables\DataTablesServiceProvider::class,
+
 
         // ... other service providers
     
@@ -177,6 +179,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([     
         'Image' => Intervention\Image\Facades\Image::class,
+        'Str' => Illuminate\Support\Str::class,
     ])->toArray(),
 
 
